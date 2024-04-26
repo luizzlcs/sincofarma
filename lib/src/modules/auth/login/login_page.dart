@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
     messageListener(controller);
     effect(() {
       if (controller.logged) {
-        Navigator.of(context).pushReplacementNamed('/home');
+        // Navigator.of(context).pushReplacementNamed('/home');
       }
     });
     super.initState();
@@ -89,7 +89,11 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                           Validatorless.email('E-mail inválido')
                         ]),
                         decoration: InputDecoration(
-                          prefixIcon: Image.asset(ImagesConstants.peopleName),
+                          prefixIcon: Image.asset(
+                            ImagesConstants.peopleName,
+                            width: 28.61,
+                            height: 28.61,
+                          ),
                           label: const Text('CPF ou E-mail'),
                         ),
                       ),
@@ -108,7 +112,11 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                             validator:
                                 Validatorless.required('Senha obrigatória'),
                             decoration: InputDecoration(
-                              prefixIcon: Image.asset(ImagesConstants.block),
+                              prefixIcon: Image.asset(
+                                ImagesConstants.block,
+                                width: 28.61,
+                                height: 28.61,
+                              ),
                               label: const Text('Senha'),
                               suffixIcon: IconButton(
                                 onPressed: () => controller.obscureToggle(),
@@ -162,7 +170,8 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                             style: SincofarmaTheme.titleSmallRegular,
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () => Navigator.of(context)
+                                .pushReplacementNamed('/auth/register'),
                             child: const Text(
                               'Cadastre-se?',
                               style: SincofarmaTheme.titleSmallBold,

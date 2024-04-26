@@ -5,10 +5,10 @@ class CustomArc extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final path = Path()
-      ..moveTo(0, 50)
-      ..lineTo(size.width, 50)
-      ..lineTo(size.width, 140 * 1.5)
-      ..quadraticBezierTo(120 * 1.6, 190 * 1.5, 0, 140 * 1.5);
+      ..moveTo(0, 0)
+      ..lineTo(size.width, 0)
+      ..lineTo(size.width, 100 * 1.5)
+      ..quadraticBezierTo(120 * 1.6, 140 * 1.5, 0, 100 * 1.5);
 
     final paint = Paint()
       ..color = SincofarmaTheme.blueColor

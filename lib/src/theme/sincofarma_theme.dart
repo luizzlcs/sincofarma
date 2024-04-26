@@ -7,7 +7,6 @@ final class SincofarmaTheme {
   static const lightGreyColor = Color(0xFFF6F6F6);
   static const greyColor = Color(0xFF777777);
   static const darkGreyColor = Color(0xFF434343);
-  static const charcoalGrey = Color(0xFF333333);
   static const blackColor = Color(0xFF000000);
 
   static final _defaultInputBorder = OutlineInputBorder(
@@ -31,6 +30,7 @@ final class SincofarmaTheme {
       ),
       floatingLabelStyle:
           const TextStyle(color: greyColor, fontWeight: FontWeight.w600),
+          isDense: true,
       border: _defaultInputBorder,
       enabledBorder: _defaultInputBorder,
       focusedBorder: _defaultInputBorder,
@@ -95,7 +95,7 @@ final class SincofarmaTheme {
 
   static const subTitleSmalldescricao = TextStyle(
     fontFamily: 'Inter',
-    color: greyColor,
+    color: darkGreyColor,
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );

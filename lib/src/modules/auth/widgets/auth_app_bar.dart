@@ -11,7 +11,7 @@ class AuthAppBar extends StatelessWidget {
           painter: CustomArc(),
           size: const Size(double.infinity, 210),
           child: Padding(
-            padding: const EdgeInsets.only(top: 116),
+            padding: const EdgeInsets.only(top: 90),
             child: Container(
               alignment: Alignment.topCenter,
               child: Image.asset(

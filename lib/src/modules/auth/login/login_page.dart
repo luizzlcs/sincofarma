@@ -53,7 +53,10 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(width: double.infinity, child: AuthAppBar()),
+            const SizedBox(
+              width: double.infinity,
+              child: AuthAppBar(),
+            ),
             const SizedBox(
               height: 100,
             ),
@@ -109,8 +112,9 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                       Watch(
                         (_) {
                           return TextFormField(
-                            onFieldSubmitted: (_){
-                               FocusScope.of(context).requestFocus(buttonEnterFocus);
+                            onFieldSubmitted: (_) {
+                              FocusScope.of(context)
+                                  .requestFocus(buttonEnterFocus);
                             },
                             style: const TextStyle(
                                 color: SincofarmaTheme.blackColor,
@@ -162,6 +166,8 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
 
                             if (valid) {
                               controller.login(emailEC.text, passwordEC.text);
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/home/next-courses');
                             }
                           },
                           child: const Text(

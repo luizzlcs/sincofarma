@@ -50,7 +50,7 @@ class _RegisterState extends State<RegisterPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(width: double.infinity, child: AuthAppBar()),
+            const SizedBox(width: double.infinity, child: AuthAppBar()),
             const SizedBox(
               height: 50,
             ),
@@ -300,7 +300,7 @@ class _RegisterState extends State<RegisterPage> {
                                 ),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    print('Termo de uso');
+                                    debugPrint('Termo de uso');
                                   }),
                             const TextSpan(
                               text: ' e com a ',
@@ -313,7 +313,7 @@ class _RegisterState extends State<RegisterPage> {
                                       decoration: TextDecoration.underline),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
-                                  print('Politica de privacidade');
+                                  debugPrint('Politica de privacidade');
                                 },
                             )
                           ],

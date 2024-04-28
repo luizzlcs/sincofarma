@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/widgets/search_button.dart';
 import 'package:sincofarma/src/widgets/custom_arc.dart';
 import '../../../constants/images_constants.dart';
 
 class AuthAppBar extends StatelessWidget {
+  const AuthAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -23,7 +26,7 @@ class AuthAppBar extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

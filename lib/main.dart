@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
+import 'package:sincofarma/src/modules/aboutSincofarma/sincofarma_module.dart';
 import 'package:sincofarma/src/modules/auth/auth_module.dart';
+import 'package:sincofarma/src/modules/home/home_module.dart';
+import 'package:sincofarma/src/modules/paymentMethod/payment_module.dart';
+import 'package:sincofarma/src/modules/profile/profile_module.dart';
 import 'package:sincofarma/src/pages/splashPage/splash_page.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
@@ -21,6 +25,10 @@ class Sincofarma extends StatelessWidget {
       ],
       modules: [
         AuthModule(),
+        HomeModule(),
+        ProfileModule(),
+        PaymentModule(),
+        SincofarmaModule(),
       ],
       builder: (context, routes, flutterGetItNavObserver) {
         return MaterialApp(

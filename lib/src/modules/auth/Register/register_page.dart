@@ -27,6 +27,9 @@ class _RegisterState extends State<RegisterPage> {
   final passwordEC = TextEditingController();
   final confirmPasswordEC = TextEditingController();
 
+  final FocusNode confirmpasswordFocus = FocusNode();
+  final FocusNode registerFocus = FocusNode();
+
   @override
   void dispose() {
     cnpjEC.dispose();
@@ -35,6 +38,8 @@ class _RegisterState extends State<RegisterPage> {
     emailEC.dispose();
     passwordEC.dispose();
     confirmPasswordEC.dispose();
+    confirmpasswordFocus.dispose();
+    registerFocus.dispose();
     super.dispose();
   }
 
@@ -73,6 +78,8 @@ class _RegisterState extends State<RegisterPage> {
                         height: 31,
                       ),
                       TextFormField(
+                        autofocus: true,
+                        textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),
                         controller: cnpjEC,
@@ -98,10 +105,14 @@ class _RegisterState extends State<RegisterPage> {
                         height: 14.31,
                       ),
                       TextFormField(
+                        textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),
                         controller: cpfEC,
-                        validator: Validatorless.cnpj('Este CPF não é valido'),
+                        validator: Validatorless.multiple([
+                          Validatorless.required('CPF é obrigatório'),
+                          Validatorless.cpf('Este CPF não é valido')
+                        ]),
                         keyboardType: TextInputType.number,
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
@@ -122,6 +133,7 @@ class _RegisterState extends State<RegisterPage> {
                         height: 14.31,
                       ),
                       TextFormField(
+                        textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),
                         controller: nameEC,
@@ -143,6 +155,7 @@ class _RegisterState extends State<RegisterPage> {
                         height: 14.31,
                       ),
                       TextFormField(
+                        textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),
                         controller: emailEC,
@@ -167,6 +180,9 @@ class _RegisterState extends State<RegisterPage> {
                       ),
                       Watch((_) {
                         return TextFormField(
+                          textInputAction: TextInputAction.next,
+                          onFieldSubmitted: (value) => FocusScope.of(context)
+                              .requestFocus(confirmpasswordFocus),
                           style: const TextStyle(
                               color: SincofarmaTheme.blackColor),
                           controller: passwordEC,
@@ -203,6 +219,12 @@ class _RegisterState extends State<RegisterPage> {
                       Watch(
                         (_) {
                           return TextFormField(
+                            textInputAction: TextInputAction.next,
+                            focusNode: confirmpasswordFocus,
+                            onFieldSubmitted: (value) {
+                              FocusScope.of(context)
+                                  .requestFocus(registerFocus);
+                            },
                             style: const TextStyle(
                                 color: SincofarmaTheme.blackColor),
                             controller: confirmPasswordEC,
@@ -243,7 +265,16 @@ class _RegisterState extends State<RegisterPage> {
                         width: sizeOf.width * 0.8,
                         height: 48,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          focusNode: registerFocus,
+                          onPressed: () {
+                            final valid =
+                                formKey.currentState?.validate() ?? false;
+
+                            if (valid) {
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/auth/login');
+                            }
+                          },
                           child: const Text(
                             'Cadastre-se',
                           ),
@@ -263,7 +294,8 @@ class _RegisterState extends State<RegisterPage> {
                           children: [
                             TextSpan(
                                 text: 'Termo de Uso',
-                                style: const TextStyle(
+                                style: SincofarmaTheme.subTitleSmalldescricao
+                                    .copyWith(
                                   decoration: TextDecoration.underline,
                                 ),
                                 recognizer: TapGestureRecognizer()
@@ -272,11 +304,13 @@ class _RegisterState extends State<RegisterPage> {
                                   }),
                             const TextSpan(
                               text: ' e com a ',
+                              style: SincofarmaTheme.subTitleSmalldescricao,
                             ),
                             TextSpan(
                               text: 'Política de Privacidade.',
-                              style: const TextStyle(
-                                  decoration: TextDecoration.underline),
+                              style: SincofarmaTheme.subTitleSmalldescricao
+                                  .copyWith(
+                                      decoration: TextDecoration.underline),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   print('Politica de privacidade');

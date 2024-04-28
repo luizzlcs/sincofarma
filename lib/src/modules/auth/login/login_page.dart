@@ -23,6 +23,8 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
   final passwordEC = TextEditingController();
   final controller = Injector.get<LoginController>();
 
+  final FocusNode buttonEnterFocus = FocusNode();
+
   @override
   void initState() {
     messageListener(controller);
@@ -38,6 +40,8 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
   void dispose() {
     emailEC.dispose();
     passwordEC.dispose();
+    buttonEnterFocus.dispose();
+
     super.dispose();
   }
 
@@ -81,6 +85,8 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                         height: 32,
                       ),
                       TextFormField(
+                        autofocus: true,
+                        textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),
                         controller: emailEC,
@@ -103,6 +109,9 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                       Watch(
                         (_) {
                           return TextFormField(
+                            onFieldSubmitted: (_){
+                               FocusScope.of(context).requestFocus(buttonEnterFocus);
+                            },
                             style: const TextStyle(
                                 color: SincofarmaTheme.blackColor,
                                 fontFamily: 'Inter',
@@ -146,6 +155,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                         width: sizeOf.width * 0.8,
                         height: 48,
                         child: ElevatedButton(
+                          focusNode: buttonEnterFocus,
                           onPressed: () {
                             final valid =
                                 formKey.currentState?.validate() ?? false;

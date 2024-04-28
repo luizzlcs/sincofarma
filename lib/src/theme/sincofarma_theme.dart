@@ -75,8 +75,8 @@ final class SincofarmaTheme {
 
   static const titleStyle = TextStyle(
     fontFamily: 'Inter',
-    color: whiteColor,
-    fontSize: 20,
+    color: blueColor,
+    fontSize: 24,
     fontWeight: FontWeight.w700,
   );
 

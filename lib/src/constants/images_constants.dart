@@ -29,4 +29,5 @@ abstract class ImagesConstants{
   static const userProfile = 'assets/images/user_profile.png';
   static const vaccination = 'assets/images/vaccination.png';
   static const whatsApp = 'assets/images/whatsapp.png';
+  static const pharmaceutical= 'assets/images/pharmaceutical_care.png';
 }

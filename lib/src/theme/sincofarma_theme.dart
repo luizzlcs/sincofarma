@@ -99,4 +99,10 @@ final class SincofarmaTheme {
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );
+   static const subTitleDecriptionRoboto = TextStyle(
+    fontFamily: 'Roboto',
+    color: darkGreyColor,
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+  );
 }

@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_getit/flutter_getit.dart';
 import '../../../../constants/images_constants.dart';
+import '../next_courses_controller.dart';
+import 'search_form_controller.dart';
 
-class SearchButton extends StatelessWidget {
+class SearchButton extends StatefulWidget {
   const SearchButton({super.key});
+
+  @override
+  State<SearchButton> createState() => _SearchButtonState();
+}
+
+class _SearchButtonState extends State<SearchButton> with SearchFormController {
+  final controller = Injector.get<NextCoursesController>();
+
+  @override
+  void dispose() {
+    disposeForm();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +27,27 @@ class SearchButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-            width: sizeOf.width * 0.7,
-            height: 48.31,
-            child: TextFormField(
-              decoration: InputDecoration(
-                  suffixIcon: IconButton(
+          width: sizeOf.width * 0.7,
+          height: 48.31,
+          child: TextFormField(
+            controller: filteredCourseEC,
+            onChanged: (value) {
+              controller.filterCourses(value);
+            },
+            decoration: InputDecoration(
+              hintText: 'Procurar cursos...',
+              suffixIcon: IconButton(
                 onPressed: () {},
                 icon: Image.asset(ImagesConstants.search),
-              )),
-            )),
+              ),
+            ),
+          ),
+        ),
         const SizedBox(
           width: 8.97,
         ),
         Container(
-            width: sizeOf.width *0.2,
+            width: sizeOf.width * 0.2,
             height: 42.31,
             decoration: const BoxDecoration(
                 color: Colors.white,

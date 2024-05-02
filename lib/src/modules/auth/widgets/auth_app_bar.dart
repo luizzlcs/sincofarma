@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/home/nextCourses/widgets/search_button.dart';
 import 'package:sincofarma/src/widgets/custom_arc.dart';
 import '../../../constants/images_constants.dart';
 

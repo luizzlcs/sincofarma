@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../theme/sincofarma_theme.dart';
 
 class ComponentsCourses extends StatelessWidget {
@@ -18,6 +17,7 @@ class ComponentsCourses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final sizeOf = MediaQuery.of(context).size;
     return SizedBox(
       width: double.infinity,
@@ -103,11 +103,13 @@ class ComponentsCourses extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(top: 8),
                     alignment: Alignment.topLeft,
-                    width: sizeOf.width * 0.30,
-                    height: 20,
+                    width: 120,
+                    height: 30,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(),
-                      onPressed: () {},
+                      onPressed: () {
+                      
+                      },
                       child: const Text(
                         'Saiba mais',
                         style: TextStyle(

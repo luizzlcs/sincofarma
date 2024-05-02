@@ -4,9 +4,7 @@ import 'nextCourses/next_courses_router.dart';
 
 class HomeModule extends FlutterGetItModule {
   @override
-  List<Bind<Object>> get bindings => [
-    
-  ];
+  List<Bind<Object>> get bindings => [];
 
   @override
   String get moduleRouteName => '/home';
@@ -14,6 +12,5 @@ class HomeModule extends FlutterGetItModule {
   @override
   Map<String, WidgetBuilder> get pages => {
         '/next-courses': (_) => const NextCoursesRouter(),
-        
       };
 }

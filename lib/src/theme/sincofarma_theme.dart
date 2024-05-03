@@ -96,7 +96,7 @@ final class SincofarmaTheme {
   static const subTitleSmalldescricao = TextStyle(
     fontFamily: 'Inter',
     color: darkGreyColor,
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: FontWeight.w400,
   );
    static const subTitleDecriptionRoboto = TextStyle(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/home/nextCourses/widgets/nex_courses_app_bar.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/widgets/nex_courses_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
 import 'widgets/infor_course_widget.dart';
@@ -19,7 +19,7 @@ class AboutCoursePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NextCoursesAppBar(
+              NextCoursesAppBarWidget(
                 arrowBack: IconButton(
                   onPressed: () {
                     Navigator.of(context).pop();

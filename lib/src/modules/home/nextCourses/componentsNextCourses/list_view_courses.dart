@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:sincofarma/src/modules/home/nextCourses/componentsNextCourses/components_courses.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/componentsNextCourses/card_courses.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/next_courses_controller.dart';
 
 class ListViewCourses extends StatefulWidget {
@@ -30,7 +30,7 @@ class _ListViewCoursesState extends State<ListViewCourses> {
         children:  controller.filteredCourses.map((course) {
                 return ListTile(
                   dense: true,
-                  title: ComponentsCourses(
+                  title: CardCourses(
                     pathImage: course.imagePath,
                     starDate: course.startDate,
                     course: course.course,

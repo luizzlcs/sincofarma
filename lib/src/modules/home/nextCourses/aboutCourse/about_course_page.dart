@@ -45,14 +45,13 @@ class AboutCoursePage extends StatelessWidget {
               SizedBox(
                 width: sizeOf.width,
                 height: sizeOf.width * 1.7,
-                child:  const Center(
+                child: const Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       InforCourseWidget(),
                       SelectClassWidget(),
                       Text('Texto aqui e agora'),
-                     
                     ],
                   ),
                 ),

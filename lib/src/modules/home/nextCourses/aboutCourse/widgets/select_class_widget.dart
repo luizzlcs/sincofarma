@@ -51,6 +51,8 @@ class _SelectClassWidgetState extends State<SelectClassWidget> {
                     dateCourses:listData.dateCourses,
                     dayClass: listData.dayClass,
                     modalityCourse: listData.modalityCourse,
+                    index: index,
+                    isScheduled: listData.isSelected,
                   ),
                 );
               },

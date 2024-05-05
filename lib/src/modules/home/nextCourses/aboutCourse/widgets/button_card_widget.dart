@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/aboutCourse/widgets/select_class_controller.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
 class ButtonCardWidget extends StatefulWidget {
@@ -7,34 +9,45 @@ class ButtonCardWidget extends StatefulWidget {
     required this.dayClass,
     required this.modalityCourse,
     required this.dateCourses,
+    required this.index,
+    required this.isScheduled,
   });
 
   final String dayClass;
   final String modalityCourse;
   final String dateCourses;
+  final int index;
+  final bool isScheduled;
 
   @override
   State<ButtonCardWidget> createState() => _ButtonCardWidgetState();
 }
 
 class _ButtonCardWidgetState extends State<ButtonCardWidget> {
-  @override
-  void initState() {
-    super.initState();
-  }
+  final controller = Injector.get<SelectClassController>();
 
+ 
   @override
   Widget build(BuildContext context) {
-    const bool isSelected = true;
-
     return SizedBox(
       width: 120,
       height: 70,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          final teste = controller.classList
+              .map((e) => e.isSelected)
+              .toList()[widget.index];
+          
+          print(teste);
+          // ----------------
+          setState(() {
+            controller.classList[widget.index].isSelected =
+                !controller.classList[widget.index].isSelected;
+          });
+        },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(0),
-          backgroundColor: isSelected == false
+          backgroundColor: widget.isScheduled == false
               ? SincofarmaTheme.greenColor
               : SincofarmaTheme.blueColor,
         ),

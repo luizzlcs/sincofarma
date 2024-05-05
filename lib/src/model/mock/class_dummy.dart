@@ -12,7 +12,7 @@ class ClassesDummy {
       dayClass: 'Segunda e Quarta',
       modalityCourse: 'PRESENCIAL',
       dateCourses: '02 e 04/05/2024',
-      isSelected: false,
+      isSelected: true,
     ),
     ClassModel(
       dayClass: 'Terça e Quarta',
@@ -24,13 +24,13 @@ class ClassesDummy {
       dayClass: 'Quarta e Quinta',
       modalityCourse: 'PRESENCIAL',
       dateCourses: '24 e 25/05/2024',
-      isSelected: false,
+      isSelected: true,
     ),
     ClassModel(
       dayClass: 'Quinta e Sexta',
       modalityCourse: 'PRESENCIAL',
       dateCourses: '10 e 18/05/2024',
-      isSelected: false,
+      isSelected: true,
     )
   ];
 }

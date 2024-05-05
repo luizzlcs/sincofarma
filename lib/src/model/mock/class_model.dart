@@ -9,5 +9,5 @@ class ClassModel {
   final String dayClass;
   final String modalityCourse;
   final String dateCourses;
-  final bool isSelected;
+  bool isSelected;
 }

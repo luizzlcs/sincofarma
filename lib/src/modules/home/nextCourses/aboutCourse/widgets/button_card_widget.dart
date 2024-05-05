@@ -1,8 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
-class ButtonCardWidget extends StatelessWidget {
-  const ButtonCardWidget({super.key});
+class ButtonCardWidget extends StatefulWidget {
+  const ButtonCardWidget({
+    super.key,
+    required this.dayClass,
+    required this.modalityCourse,
+    required this.dateCourses,
+  });
+
+  final String dayClass;
+  final String modalityCourse;
+  final String dateCourses;
+
+  @override
+  State<ButtonCardWidget> createState() => _ButtonCardWidgetState();
+}
+
+class _ButtonCardWidgetState extends State<ButtonCardWidget> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,16 +41,16 @@ class ButtonCardWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Segunda e Terça',
+            Text(widget.dayClass,
                 style: SincofarmaTheme.subTitleSmalldescricao.copyWith(
                   color: SincofarmaTheme.whiteColor,
                 )),
-            Text('PRESENCIAL',
+            Text(widget.modalityCourse,
                 style: SincofarmaTheme.subTitleSmalldescricao.copyWith(
                   color: SincofarmaTheme.whiteColor,
                 )),
             Text(
-              '26 e 24/04/2024',
+              widget.dateCourses,
               style: SincofarmaTheme.subTitleSmalldescricao.copyWith(
                 color: SincofarmaTheme.whiteColor,
                 fontWeight: FontWeight.bold,

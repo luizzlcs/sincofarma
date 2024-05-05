@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import '../../../../../model/mock/dummy_data.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/aboutCourse/widgets/select_class_controller.dart';
 import 'button_card_widget.dart';
 
-class SelectClassWidget extends StatelessWidget {
+class SelectClassWidget extends StatefulWidget {
   const SelectClassWidget({super.key});
 
   @override
+  State<SelectClassWidget> createState() => _SelectClassWidgetState();
+}
+
+class _SelectClassWidgetState extends State<SelectClassWidget> {
+    final controller = Injector.get<SelectClassController>();
+
+  @override
+  void initState() {
+    controller.allClasses;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final listClass = controller.classList;
     final sizeOf = MediaQuery.of(context).size;
-    final controller = Injector.get<DummyData>();
-    final dataCourse = controller.data;
     return Row(
       children: [
         Expanded(
@@ -30,11 +42,16 @@ class SelectClassWidget extends StatelessWidget {
               ),
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
-              itemCount: dataCourse.length,
+              itemCount: listClass.length,
               itemBuilder: (context, index) {
-                return const SizedBox(
+                final listData = listClass[index];
+                return  SizedBox(
                   height: 80,
-                  child: ButtonCardWidget(),
+                  child: ButtonCardWidget(
+                    dateCourses:listData.dateCourses,
+                    dayClass: listData.dayClass,
+                    modalityCourse: listData.modalityCourse,
+                  ),
                 );
               },
             ),

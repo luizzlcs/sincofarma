@@ -108,7 +108,7 @@ class CardCoursesWidget extends StatelessWidget {
                       style: ElevatedButton.styleFrom(),
                       onPressed: () {
                         Navigator.of(context)
-                            .pushNamed('/home/about-course');
+                            .pushNamed('/home/about-course', arguments: course);
                       },
                       child: const Text(
                         'Saiba mais',

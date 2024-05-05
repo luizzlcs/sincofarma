@@ -3,7 +3,9 @@ import 'package:sincofarma/src/constants/images_constants.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
 class InforCourseWidget extends StatelessWidget {
-  const InforCourseWidget({super.key});
+  const InforCourseWidget({super.key, required this.course});
+
+  final String course;
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +17,15 @@ class InforCourseWidget extends StatelessWidget {
           fit: BoxFit.cover,
           width: double.infinity,
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 20.0),
+         Padding(
+          padding: const EdgeInsets.only(left: 20.0,top: 8),
           child: Text(
-            'VACINAÇÃO',
-            style: TextStyle(
+            course.toUpperCase(),
+            style: const TextStyle(
               color: SincofarmaTheme.blueColor,
               fontFamily: 'Inter',
               fontSize: 35,
+              height: 0.9,
               fontWeight: FontWeight.w900,
             ),
           ),

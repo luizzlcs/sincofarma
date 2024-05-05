@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/widgets/nex_courses_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
-import 'NextCoursesWidgets/list_view_courses.dart';
+import 'NextCoursesWidgets/list_view_courses_widget.dart';
 
 class NextCoursesPage extends StatelessWidget {
   const NextCoursesPage({super.key});
@@ -31,7 +31,7 @@ class NextCoursesPage extends StatelessWidget {
               SizedBox(
                 width: sizeOf.width * 1.2,
                 height: sizeOf.width * 1.6,
-                child: const ListViewCourses(),
+                child: const ListViewCoursesWidget(),
               )
             ],
           ),

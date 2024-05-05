@@ -26,31 +26,32 @@ class ButtonCardWidget extends StatefulWidget {
 class _ButtonCardWidgetState extends State<ButtonCardWidget> {
   final controller = Injector.get<SelectClassController>();
 
- 
   @override
   Widget build(BuildContext context) {
+    Color backgroundColor =
+        controller.classList.map((e) => e.isSelected).toList()[widget.index]
+            ? SincofarmaTheme.blueColor
+            : SincofarmaTheme.greenColor;
     return SizedBox(
       width: 120,
       height: 70,
       child: ElevatedButton(
         onPressed: () {
-          final teste = controller.classList
+          final scheduled = controller.classList
               .map((e) => e.isSelected)
               .toList()[widget.index];
-          
-          print(teste);
-          // ----------------
+
+          controller.classList[widget.index].isSelected =
+              !controller.classList[widget.index].isSelected;
+
           setState(() {
-            controller.classList[widget.index].isSelected =
-                !controller.classList[widget.index].isSelected;
+            backgroundColor = scheduled == true
+                ? SincofarmaTheme.greenColor
+                : SincofarmaTheme.blueColor;
           });
         },
         style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.all(0),
-          backgroundColor: widget.isScheduled == false
-              ? SincofarmaTheme.greenColor
-              : SincofarmaTheme.blueColor,
-        ),
+            padding: const EdgeInsets.all(0), backgroundColor: backgroundColor),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

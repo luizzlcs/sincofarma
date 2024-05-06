@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import '../../../../theme/sincofarma_theme.dart';
 
@@ -78,10 +79,12 @@ class CardCoursesWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 13.74),
             child: SizedBox(
               width: sizeOf.width * 0.51,
+              height: 145,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  AutoSizeText(
+                    maxLines: 1,
                     course,
                     style: const TextStyle(
                         fontSize: 24,
@@ -90,11 +93,12 @@ class CardCoursesWidget extends StatelessWidget {
                         height: 0.8),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 4.0),
-                    child: Text(
+                    padding: const EdgeInsets.only(top: 4.1),
+                    child: AutoSizeText(
+                      maxLines: 5,
                       description,
                       style: SincofarmaTheme.subTitleDecriptionRoboto.copyWith(
-                        overflow: TextOverflow.clip,
+                        overflow: TextOverflow.ellipsis,
                         height: 1.0,
                       ),
                     ),

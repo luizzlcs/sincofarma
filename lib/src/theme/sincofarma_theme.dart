@@ -4,10 +4,12 @@ final class SincofarmaTheme {
   static const greenColor = Color(0xFF1DB336);
   static const whiteColor = Color(0xffFFFFFF);
   static const blueColor = Color(0xFF282B5D);
+  static const naturalBlueColor = Color(0xFF494C83);
   static const lightGreyColor = Color(0xFFF6F6F6);
   static const greyColor = Color(0xFF777777);
   static const darkGreyColor = Color(0xFF434343);
   static const blackColor = Color(0xFF000000);
+
 
   static final _defaultInputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),

@@ -51,6 +51,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
 
     return Scaffold(
       body: SingleChildScrollView(
+        reverse: true,
         child: Column(
           children: [
             const SizedBox(

@@ -46,7 +46,7 @@ class _SelectClassWidgetState extends State<SelectClassWidget> {
               itemBuilder: (context, index) {
                 final listData = listClass[index];
                 return  SizedBox(
-                  height: 80,
+                  height: 49,
                   child: ButtonCardWidget(
                     dateCourses:listData.dateCourses,
                     dayClass: listData.dayClass,

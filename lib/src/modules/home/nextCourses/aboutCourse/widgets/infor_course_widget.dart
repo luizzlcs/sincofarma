@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/constants/images_constants.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
@@ -18,9 +19,10 @@ class InforCourseWidget extends StatelessWidget {
           width: double.infinity,
         ),
          Padding(
-          padding: const EdgeInsets.only(left: 20.0,top: 8),
-          child: Text(
+          padding: const EdgeInsets.only(left: 20.0,top: 8, right: 10),
+          child: AutoSizeText(
             course.toUpperCase(),
+            maxLines: 1,
             style: const TextStyle(
               color: SincofarmaTheme.blueColor,
               fontFamily: 'Inter',

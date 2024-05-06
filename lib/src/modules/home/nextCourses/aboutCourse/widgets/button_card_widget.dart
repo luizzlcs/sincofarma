@@ -33,8 +33,8 @@ class _ButtonCardWidgetState extends State<ButtonCardWidget> {
             ? SincofarmaTheme.blueColor
             : SincofarmaTheme.greenColor;
     return SizedBox(
-      width: 120,
-      height: 70,
+      width: 115,
+      height: 80,
       child: ElevatedButton(
         onPressed: () {
           final scheduled = controller.classList

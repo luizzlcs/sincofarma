@@ -9,10 +9,10 @@ class MyMenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       child: Column(
         children: [
-          const MenuStrip(
+          MenuStrip(
             label: 'Meu menu',
           ),
           MenuWidget(
@@ -23,7 +23,7 @@ class MyMenuWidget extends StatelessWidget {
             icon: ImagesConstants.student,
             label: 'Meu Cursos',
           ),
-          const MenuStrip(
+          MenuStrip(
             label: 'Minhas informações',
           ),
           MenuWidget(
@@ -34,7 +34,7 @@ class MyMenuWidget extends StatelessWidget {
             icon: ImagesConstants.download,
             label: 'Certificados',
           ),
-          const MenuStrip(
+          MenuStrip(
             label: 'Preferências',
           ),
           MenuWidget(

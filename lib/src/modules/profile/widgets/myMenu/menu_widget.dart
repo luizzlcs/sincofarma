@@ -3,7 +3,7 @@ import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../../../theme/sincofarma_theme.dart';
 
 class MenuWidget extends StatelessWidget {
-  MenuWidget({
+  const MenuWidget({
     super.key,
     required this.icon,
     required this.label,

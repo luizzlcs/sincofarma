@@ -17,7 +17,6 @@ class ExpandableWidget extends StatefulWidget {
 
 class _ExpandableWidgetState extends State<ExpandableWidget> {
   bool _estaExpandido = false;
-  
 
   void _alternarEstado() {
     setState(() {
@@ -32,6 +31,7 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
         GestureDetector(
           onTap: _alternarEstado,
           child: Container(
+            height: 60,
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
               border: const Border.symmetric(
@@ -62,9 +62,6 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
                       color: Colors.white,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 9,
                 ),
               ],
             ),

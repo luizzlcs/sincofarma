@@ -19,7 +19,7 @@ class InforCourseWidget extends StatelessWidget {
           width: double.infinity,
         ),
          Padding(
-          padding: const EdgeInsets.only(left: 20.0,top: 8, right: 10),
+          padding: const EdgeInsets.only(left: 14.0,top: 8, right: 10),
           child: AutoSizeText(
             course.toUpperCase(),
             maxLines: 1,

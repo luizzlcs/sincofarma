@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/home/nextCourses/widgets/nex_courses_app_bar_widget.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/NextCoursesWidgets/nex_courses_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 import 'NextCoursesWidgets/list_view_courses_widget.dart';
 

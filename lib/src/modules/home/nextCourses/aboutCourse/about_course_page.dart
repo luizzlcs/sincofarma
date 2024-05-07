@@ -1,5 +1,6 @@
+
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/home/nextCourses/widgets/nex_courses_app_bar_widget.dart';
+import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 import 'widgets/expandableInfo/listview_expandable_widget.dart';
 import 'widgets/infor_course_widget.dart';
@@ -19,7 +20,7 @@ class AboutCoursePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          NextCoursesAppBarWidget(
+          CustomAppBarWidget(
             arrowBack: IconButton(
               onPressed: () {
                 Navigator.of(context).pop();
@@ -29,9 +30,6 @@ class AboutCoursePage extends StatelessWidget {
                 color: SincofarmaTheme.whiteColor,
               ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
           ),
           const Padding(
             padding: EdgeInsets.only(left: 10.0),
@@ -44,7 +42,7 @@ class AboutCoursePage extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            height: sizeOf.width * 1.52,
+            height: sizeOf.width * 1.69,
             child: SingleChildScrollView(
               child: Center(
                 child: Column(
@@ -57,11 +55,11 @@ class AboutCoursePage extends StatelessWidget {
                       padding: EdgeInsets.only(left: 6, right: 8),
                       child: SelectClassWidget(),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 7, left: 20, right: 20),
+                     Padding(
+                      padding: const EdgeInsets.only(top: 7, left: 16, right: 11),
                       child: SizedBox(
-                        height: 300,
-                        child: ListviewExpandableWidget(),
+                        height: sizeOf.width * 0.65,
+                        child: const ListviewExpandableWidget(),
                       ),
                     ),
                     Center(

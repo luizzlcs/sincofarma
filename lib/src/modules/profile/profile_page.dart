@@ -43,7 +43,9 @@ class ProfilePage extends StatelessWidget {
                           shape: const RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(5)))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/profile/edite-profile-page');
+                      },
                       child: const Text(
                         'Editar Perfil',
                         style: TextStyle(

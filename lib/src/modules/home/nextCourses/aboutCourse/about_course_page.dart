@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
@@ -20,17 +19,7 @@ class AboutCoursePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppBarWidget(
-            arrowBack: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: SincofarmaTheme.whiteColor,
-              ),
-            ),
-          ),
+          const CustomAppBarWidget(),
           const Padding(
             padding: EdgeInsets.only(left: 10.0),
             child: Center(
@@ -55,8 +44,9 @@ class AboutCoursePage extends StatelessWidget {
                         padding: EdgeInsets.only(left: 6, right: 8),
                         child: SelectClassWidget(),
                       ),
-                       Padding(
-                        padding: const EdgeInsets.only(top: 7, left: 16, right: 11),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 7, left: 16, right: 11),
                         child: SizedBox(
                           height: sizeOf.width * 0.65,
                           child: const ListviewExpandableWidget(),

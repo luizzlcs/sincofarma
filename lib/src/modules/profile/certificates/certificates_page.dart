@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../widgets/in_construction.dart';
+
 class CertificatesPage extends StatelessWidget {
 
   const CertificatesPage({ super.key });
@@ -8,7 +10,9 @@ class CertificatesPage extends StatelessWidget {
    Widget build(BuildContext context) {
        return Scaffold(
            appBar: AppBar(title: const Text('Certificados'),),
-           body: Container(),
+           body: const Center(
+        child: InConstruction(),
+      ),
        );
   }
 }

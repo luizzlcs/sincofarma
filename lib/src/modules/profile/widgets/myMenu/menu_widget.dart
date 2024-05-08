@@ -7,14 +7,17 @@ class MenuWidget extends StatelessWidget {
     super.key,
     required this.icon,
     required this.label,
+    this.router,
+    
   });
   final String icon;
   final String label;
+  final String? router;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: ()=> Navigator.of(context).pushNamed('$router'),
       child: Ink(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

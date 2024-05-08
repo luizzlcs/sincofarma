@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../../../constants/images_constants.dart';
+import '../../../../widgets/buttons_app_bar_widget.dart';
 
 class CustomLogoIcons extends StatelessWidget {
-  const CustomLogoIcons({super.key, this.arrowBack});
-  final Widget? arrowBack;
+  const CustomLogoIcons({super.key, this.isArrowBack = false});
+  final bool isArrowBack;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,17 @@ class CustomLogoIcons extends StatelessWidget {
         SizedBox(
           child: Row(
             children: [
-              Container(
-                child: arrowBack,
+              Visibility(
+                visible: isArrowBack,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    color: Colors.white,
+                  ),
+                ),
               ),
               Image.asset(
                 width: 140,
@@ -26,25 +35,10 @@ class CustomLogoIcons extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Image.asset(ImagesConstants.notification),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/profile/profile-page');
-                },
-                icon: Image.asset(
-                  ImagesConstants.peopleName,
-                  color: Colors.white,
-                ),
-              )
-            ],
-          ),
-        ),
+        const ButtonsAppBarWidget(
+          isVisibleNotification: true,
+          isVisibleProfile: true,
+        )
       ],
     );
   }

@@ -18,10 +18,12 @@ class MyMenuWidget extends StatelessWidget {
           MenuWidget(
             icon: ImagesConstants.profile,
             label: 'Meu Perfil',
+            router: '/profile/my-profile-page',
           ),
           MenuWidget(
             icon: ImagesConstants.student,
             label: 'Meu Cursos',
+            router: '/profile/my-course-page',
           ),
           MenuStrip(
             label: 'Minhas informações',
@@ -29,10 +31,12 @@ class MyMenuWidget extends StatelessWidget {
           MenuWidget(
             icon: ImagesConstants.heart,
             label: 'Favoritos',
+            router: '/profile/favorite-page',
           ),
           MenuWidget(
             icon: ImagesConstants.download,
             label: 'Certificados',
+            router: '/profile/certificates-page',
           ),
           MenuStrip(
             label: 'Preferências',
@@ -40,10 +44,12 @@ class MyMenuWidget extends StatelessWidget {
           MenuWidget(
             icon: ImagesConstants.info,
             label: 'Sobre o Sincofarma',
+            router: '/sincofarma/about-sincofarma-page',
           ),
           MenuWidget(
             icon: ImagesConstants.userProfile,
             label: 'Torne-se associado',
+            router: '/profile/associate-page',
           ),
         ],
       ),

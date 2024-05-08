@@ -10,4 +10,5 @@ class ProfileRoute extends FlutterGetItModulePageRouter {
 
   @override
   WidgetBuilder get view => (BuildContext context) => const ProfilePage();
+  
 }

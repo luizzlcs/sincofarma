@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/widgets/custom_arc.dart';
 import '../../../constants/images_constants.dart';
+import '../../../widgets/custom_arc_widget.dart';
 
 class AuthAppBar extends StatelessWidget {
   const AuthAppBar({super.key});
@@ -10,7 +10,7 @@ class AuthAppBar extends StatelessWidget {
     return Stack(
       children: [
         CustomPaint(
-          painter: CustomArc(),
+          painter: CustomArcWidget(),
           size: const Size(double.infinity, 210),
           child: Padding(
             padding: const EdgeInsets.only(top: 90),

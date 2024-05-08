@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/profile/widgets/custom_arc_widget.dart';
+import '../../../widgets/custom_arc_widget.dart';
 
 
 class CustomAppBarWidget extends StatelessWidget {
@@ -16,7 +16,13 @@ class CustomAppBarWidget extends StatelessWidget {
     return Stack(
       children: [
         CustomPaint(
-          painter: CustomArcWidget(),
+          painter: CustomArcWidget(
+            lineTo2Y: 186,
+            x1: 192,
+            y1: 255 ,
+            x2: 0,
+            y2: 187.5,
+          ),
           size: const Size(double.infinity, 150),
           child: const Padding(
             padding: EdgeInsets.only(top: 31),

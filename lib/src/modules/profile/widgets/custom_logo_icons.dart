@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
-import '../../../constants/images_constants.dart';
+import 'package:sincofarma/src/widgets/buttons_app_bar_widget.dart';
 
 class CustomLogoIcons extends StatelessWidget {
   const CustomLogoIcons({super.key, this.arrowBack});
@@ -14,7 +14,7 @@ class CustomLogoIcons extends StatelessWidget {
         Container(
           alignment: Alignment.topCenter,
           child: IconButton(
-            onPressed: () { 
+            onPressed: () {
               Navigator.of(context).pop();
             },
             icon: const Icon(
@@ -29,16 +29,7 @@ class CustomLogoIcons extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Image.asset(ImagesConstants.notification),
-              ),
-            ],
-          ),
-        ),
+        const ButtonsAppBarWidget(isVisibleProfile: false)
       ],
     );
   }

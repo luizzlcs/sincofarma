@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/in_construction.dart';
+import '../../../widgets/in_construction_widget.dart';
 
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({super.key});
@@ -12,7 +12,7 @@ class MyProfilePage extends StatelessWidget {
         title: const Text('Meu Perfil'),
       ),
       body: const Center(
-        child: InConstruction(),
+        child: InConstructionWidget(),
       ),
     );
   }

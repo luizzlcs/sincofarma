@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/in_construction.dart';
+import '../../../widgets/in_construction_widget.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -11,7 +11,7 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Configuração de notificações'),
       ),
-      body: const Center(child: InConstruction()),
+      body: const Center(child: InConstructionWidget()),
     );
   }
 }

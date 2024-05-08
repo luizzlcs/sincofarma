@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/in_construction.dart';
+import '../../../widgets/in_construction_widget.dart';
 
 class CertificatesPage extends StatelessWidget {
 
@@ -11,7 +11,7 @@ class CertificatesPage extends StatelessWidget {
        return Scaffold(
            appBar: AppBar(title: const Text('Certificados'),),
            body: const Center(
-        child: InConstruction(),
+        child: InConstructionWidget(),
       ),
        );
   }

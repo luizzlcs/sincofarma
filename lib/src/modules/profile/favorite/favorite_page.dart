@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/in_construction.dart';
+import '../../../widgets/in_construction_widget.dart';
 
 class FavoritePage extends StatelessWidget {
   const FavoritePage({super.key});
@@ -12,7 +12,7 @@ class FavoritePage extends StatelessWidget {
         title: const Text('Favoritos'),
       ),
       body: const Center(
-        child: InConstruction(),
+        child: InConstructionWidget(),
       ),
     );
   }

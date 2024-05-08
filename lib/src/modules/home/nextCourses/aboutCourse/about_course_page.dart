@@ -40,39 +40,43 @@ class AboutCoursePage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            width: double.infinity,
-            height: sizeOf.width * 1.69,
-            child: SingleChildScrollView(
-              child: Center(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    InforCourseWidget(
-                      course: courseString,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 6, right: 8),
-                      child: SelectClassWidget(),
-                    ),
-                     Padding(
-                      padding: const EdgeInsets.only(top: 7, left: 16, right: 11),
-                      child: SizedBox(
-                        height: sizeOf.width * 0.65,
-                        child: const ListviewExpandableWidget(),
+          Expanded(
+            child: SizedBox(
+              width: double.infinity,
+              child: SingleChildScrollView(
+                child: Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      InforCourseWidget(
+                        course: courseString,
                       ),
-                    ),
-                    Center(
-                      child: SizedBox(
-                        width: 316,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Clique aqui e Inscreva-se',
-                            )),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 6, right: 8),
+                        child: SelectClassWidget(),
                       ),
-                    ),
-                  ],
+                       Padding(
+                        padding: const EdgeInsets.only(top: 7, left: 16, right: 11),
+                        child: SizedBox(
+                          height: sizeOf.width * 0.65,
+                          child: const ListviewExpandableWidget(),
+                        ),
+                      ),
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: SizedBox(
+                            width: 316,
+                            child: ElevatedButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  'Clique aqui e Inscreva-se',
+                                )),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

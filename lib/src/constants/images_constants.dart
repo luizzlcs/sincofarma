@@ -32,4 +32,5 @@ abstract class ImagesConstants{
   static const pharmaceutical= 'assets/images/pharmaceutical_care.png';
   static const aboutCourse= 'assets/images/about_course.png';
   static const download = 'assets/images/download-simple.png';
+  static const inConstruction = 'assets/images/in_construction.gif';
 }

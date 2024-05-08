@@ -89,7 +89,6 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                         height: 32,
                       ),
                       TextFormField(
-                        autofocus: true,
                         textInputAction: TextInputAction.next,
                         style:
                             const TextStyle(color: SincofarmaTheme.blackColor),

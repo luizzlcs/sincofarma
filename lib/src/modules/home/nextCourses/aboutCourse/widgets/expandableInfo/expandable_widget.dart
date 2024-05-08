@@ -16,11 +16,11 @@ class ExpandableWidget extends StatefulWidget {
 }
 
 class _ExpandableWidgetState extends State<ExpandableWidget> {
-  bool _estaExpandido = false;
+  bool _isExpanded = false;
 
-  void _alternarEstado() {
+  void _toggleState() {
     setState(() {
-      _estaExpandido = !_estaExpandido;
+      _isExpanded = !_isExpanded;
     });
   }
 
@@ -29,16 +29,17 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
     return Column(
       children: [
         GestureDetector(
-          onTap: _alternarEstado,
+          onTap: _toggleState,
           child: Container(
             height: 60,
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(12.0),
             decoration: BoxDecoration(
               border: const Border.symmetric(
-                  horizontal: BorderSide(
-                width: 1,
-                color: Colors.white,
-              )),
+                horizontal: BorderSide(
+                  width: 1,
+                  color: Colors.white,
+                ),
+              ),
               color: widget.index.isOdd
                   ? SincofarmaTheme.naturalBlueColor
                   : SincofarmaTheme.blueColor,
@@ -56,7 +57,7 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
                       ),
                     ),
                     Icon(
-                      _estaExpandido
+                      _isExpanded
                           ? Icons.expand_less_sharp
                           : Icons.add_circle_outline_outlined,
                       color: Colors.white,
@@ -67,11 +68,11 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
             ),
           ),
         ),
-        if (_estaExpandido)
+        if (_isExpanded)
           const SizedBox(
             height: 16.0,
           ),
-        if (_estaExpandido)
+        if (_isExpanded)
           Container(
             padding: const EdgeInsets.all(16.0),
             decoration: const BoxDecoration(

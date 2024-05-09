@@ -11,6 +11,9 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    final statusBar = mediaQuery.padding.top;
+    final heightBody = mediaQuery.size.height - statusBar - kToolbarHeight;
     final sizeOf = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
@@ -44,7 +47,8 @@ class ProfilePage extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(5)))),
                       onPressed: () {
-                        Navigator.of(context).pushNamed('/profile/edite-profile-page');
+                        Navigator.of(context)
+                            .pushNamed('/profile/edite-profile-page');
                       },
                       child: const Text(
                         'Editar Perfil',

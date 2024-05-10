@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/profile/widgets/custom_app_bar_widget.dart';
 import 'package:sincofarma/src/modules/profile/widgets/custom_logo_icons.dart';
@@ -11,63 +13,68 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    final statusBar = mediaQuery.padding.top;
-    final heightBody = mediaQuery.size.height - statusBar - kToolbarHeight;
-    final sizeOf = MediaQuery.of(context).size;
+    final sizeOf = MediaQuery.sizeOf(context);
+    log('Altuara da tela: ${sizeOf.height}');
     return Scaffold(
-      body: Column(
-        children: [
-          const CustomAppBarWidget(),
-          Padding(
-            padding: const EdgeInsets.only(top: 36),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: sizeOf.width * 0.93,
-                  child: const CustomLogoIcons(),
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                // const SearchButtonWidget(),
-                const Stack(
+      body: SizedBox(
+        height: sizeOf.height,
+        width: sizeOf.width,
+        
+        child: SingleChildScrollView(          
+          child: Column(
+            children: [
+              const CustomAppBarWidget(),
+              Padding(
+                padding: const EdgeInsets.only(top: 36),
+                child: Column(
                   children: [
-                    ImageProviderWidget(),
-                    EditImage(),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 4.0),
-                  child: Center(
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: SincofarmaTheme.blueColor,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5)))),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .pushNamed('/profile/edite-profile-page');
-                      },
-                      child: const Text(
-                        'Editar Perfil',
-                        style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 12,
-                            fontWeight: FontWeight.normal),
+                    SizedBox(
+                      width: sizeOf.width * 0.93,
+                      child: const CustomLogoIcons(),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    // const SearchButtonWidget(),
+                    const Stack(
+                      children: [
+                        ImageProviderWidget(),
+                        EditImage(),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 4.0),
+                      child: Center(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: SincofarmaTheme.blueColor,
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(5)))),
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed('/profile/edite-profile-page');
+                          },
+                          child: const Text(
+                            'Editar Perfil',
+                            style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 12,
+                                fontWeight: FontWeight.normal),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    const SizedBox(
+                      height: 38,
+                    ),
+                    const MyMenuWidget(),
+                  ],
                 ),
-                const SizedBox(
-                  height: 38,
-                ),
-                const MyMenuWidget(),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

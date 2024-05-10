@@ -31,7 +31,6 @@ class CardCoursesWidget extends StatelessWidget {
                 width: sizeOf.width * 0.35,
                 height: 130,
                 decoration: const BoxDecoration(
-                  color: Colors.deepPurple,
                   borderRadius: BorderRadius.all(
                     Radius.circular(16),
                   ),

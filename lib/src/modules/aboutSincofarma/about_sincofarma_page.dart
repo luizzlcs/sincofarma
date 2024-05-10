@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
@@ -8,15 +10,16 @@ class AboutSincofarmaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final sizeOf = MediaQuery.sizeOf(context);
+    return  Scaffold(
       body: SizedBox(
-        height: double.infinity,
-        child: Column(
+        height: sizeOf.height,
+        child:  Column(
           children: [
-            CustomAppBarWidget(
+            const CustomAppBarWidget(
                
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(12.0),
               child: Text(
                 'Sobre o Sincofarma',
@@ -24,10 +27,10 @@ class AboutSincofarmaPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 27, right: 23),
+              padding: const EdgeInsets.only(left: 27, right: 23),
               child: SizedBox(
-                height: 620,
-                child: SingleChildScrollView(
+                height: sizeOf.height * .75,
+                child: const SingleChildScrollView(
                   child: Text(
                     textAlign: TextAlign.left,
                     '''O Sincofarma/SP é o sindicato do Comércio Varejista de Produtos Farmacêuticos do estado de São Paulo. É o órgão oficial do patronal que representa todas as empresas com Farmácias ou Drogarias no estado de São Paulo nas negociações salariais e convenções coletivas de trabalho.

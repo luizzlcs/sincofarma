@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constants/images_constants.dart';
-import '../../../widgets/custom_arc_widget.dart';
+import '../../../widgets/appBar/custom_arc_widget.dart';
 
 class AuthAppBar extends StatelessWidget {
   const AuthAppBar({super.key});

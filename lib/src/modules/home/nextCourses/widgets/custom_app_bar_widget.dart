@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_logo_icons.dart';
-import '../../../../widgets/custom_arc_widget.dart';
+import '../../../../widgets/appBar/custom_arc_widget.dart';
 
 class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({super.key});

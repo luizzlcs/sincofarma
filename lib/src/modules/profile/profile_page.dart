@@ -1,10 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/modules/profile/widgets/custom_app_bar_widget.dart';
-import 'package:sincofarma/src/modules/profile/widgets/custom_logo_icons.dart';
-
+import 'package:sincofarma/src/widgets/appBar/custom_app_bar_widget.dart';
 import '../../theme/sincofarma_theme.dart';
+import 'widgets/custom_arc_profile_widget.dart';
 import 'widgets/imageProvider/image_provider_widget.dart';
 import 'widgets/myMenu/my_menu_widget.dart';
 
@@ -19,27 +18,29 @@ class ProfilePage extends StatelessWidget {
       body: SizedBox(
         height: sizeOf.height,
         width: sizeOf.width,
-        
-        child: SingleChildScrollView(          
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              const CustomAppBarWidget(),
+              const CustomArcProfileWidget(),
               Padding(
                 padding: const EdgeInsets.only(top: 36),
                 child: Column(
                   children: [
                     SizedBox(
                       width: sizeOf.width * 0.93,
-                      child: const CustomLogoIcons(),
+                      child: const CustomAppBarWidget(
+                        isVisibleNotification: true,
+                        isVisibleProfile: false,
+                        isArrowBack: true,
+                        isVisibleLogo: false,
+                        isLabel: true,
+                        label: 'Perfil'
+                      ),
                     ),
-                    const SizedBox(
-                      height: 24,
-                    ),
-                    // const SearchButtonWidget(),
+                    
                     const Stack(
                       children: [
                         ImageProviderWidget(),
-                        EditImage(),
                       ],
                     ),
                     Padding(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/NextCoursesWidgets/search_bar_widget.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_logo_icons.dart';
-import '../../../../widgets/custom_arc_widget.dart';
+import '../../../../widgets/appBar/custom_arc_widget.dart';
 
 class NextCoursesAppBarWidget extends StatelessWidget {
   const NextCoursesAppBarWidget({super.key});

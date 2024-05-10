@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../constants/images_constants.dart';
-import '../../../../widgets/buttons_app_bar_widget.dart';
+import '../../../../widgets/appBar/buttons_app_bar_widget.dart';
 
 class CustomLogoIcons extends StatelessWidget {
   const CustomLogoIcons({super.key, this.isArrowBack = false});

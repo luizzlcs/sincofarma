@@ -115,4 +115,12 @@ final class SincofarmaTheme {
     fontSize: 12,
     fontWeight: FontWeight.w400,
   );
+  
+  static const titlePoppins14px = TextStyle(
+    fontFamily: 'Poppins',
+    color: blackColor,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+  );
 }
+

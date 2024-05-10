@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:sincofarma/src/modules/aboutSincofarma/sincofarma_module.dart';
 import 'package:sincofarma/src/modules/auth/auth_module.dart';
@@ -9,6 +10,8 @@ import 'package:sincofarma/src/pages/splashPage/splash_page.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const Sincofarma());
 }
 

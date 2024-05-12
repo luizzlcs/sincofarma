@@ -15,24 +15,32 @@ class CertificatesPage extends StatelessWidget {
       body: Center(
         child: SizedBox(
           height: sizeOf.height,
-          child: Column(
-            children: [
-              const CustomAppBarWidget(),
-              const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Text(
-                  'Meus Certificados',
-                  style: SincofarmaTheme.titleStyle,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const CustomAppBarWidget(),
+                const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    'Meus Certificados',
+                    style: SincofarmaTheme.titleStyle,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: sizeOf.height * .75,
-                child: const CertificateListViewWidget(),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 15.5),
+                  child: SizedBox(
+                    height: sizeOf.height * .75,
+                    child: const CertificateListViewWidget(),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
+
+@override
+List<Object?> get props => [];
 }

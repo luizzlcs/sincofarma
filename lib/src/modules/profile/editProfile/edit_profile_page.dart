@@ -36,7 +36,7 @@ class EditProfilePage extends StatelessWidget {
                         isArrowBack: true,
                         isVisibleLogo: false,
                         isLabel: true,
-                        label: 'Edital Perfil',
+                        label: 'Editar Perfil',
                       ),
                     ),
                     const SizedBox(

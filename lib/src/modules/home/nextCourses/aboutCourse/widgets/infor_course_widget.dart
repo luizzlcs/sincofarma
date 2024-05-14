@@ -1,12 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/model/mock/dummy_model.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
-
 class InforCourseWidget extends StatelessWidget {
   const InforCourseWidget({super.key, required this.course});
 
-  final String course;
+  final DummyModel course;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class InforCourseWidget extends StatelessWidget {
          Padding(
           padding: const EdgeInsets.only(left: 14.0,top: 8, right: 10),
           child: AutoSizeText(
-            course.toUpperCase(),
+            course.course.toUpperCase(),
             maxLines: 1,
             style: const TextStyle(
               color: SincofarmaTheme.blueColor,
@@ -38,11 +38,11 @@ class InforCourseWidget extends StatelessWidget {
             TextSpan(
               style: SincofarmaTheme.titleSmallRegular
                   .copyWith(color: SincofarmaTheme.darkGreyColor),
-              children: const [
+              children:  [
                 TextSpan(
-                  text: 'Programa de Formação e Habilitação\n',
+                  text: course.description,
                 ),
-                TextSpan(
+                const TextSpan(
                   text: 'de Vacinação para Farmacêuticos',
                 ),
               ],

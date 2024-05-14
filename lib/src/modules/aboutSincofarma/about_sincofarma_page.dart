@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 
@@ -11,19 +9,17 @@ class AboutSincofarmaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sizeOf = MediaQuery.sizeOf(context);
-    return  Scaffold(
+    return Scaffold(
       body: SizedBox(
         height: sizeOf.height,
-        child:  SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              const CustomAppBarWidget(
-                 
-              ),
+              const CustomAppBarWidget(),
               const Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Text(
-                  'Sobre o Sincofarma',
+                  'Sobre a Educativa',
                   style: SincofarmaTheme.titleStyle,
                 ),
               ),
@@ -34,14 +30,38 @@ class AboutSincofarmaPage extends StatelessWidget {
                   child: const SingleChildScrollView(
                     child: Text(
                       textAlign: TextAlign.left,
-                      '''O Sincofarma/SP é o sindicato do Comércio Varejista de Produtos Farmacêuticos do estado de São Paulo. É o órgão oficial do patronal que representa todas as empresas com Farmácias ou Drogarias no estado de São Paulo nas negociações salariais e convenções coletivas de trabalho.
-                              \nO Sincofarma SP é o primeiro órgão oficial do Patronal das Farmácias e Drogarias no Brasil.
-                              \nOs serviços disponíveis aos associados são: Assuntos Regulatórios, PCMSO Programa de Controle de Medicina da Saúde Ocupacional, Assessoria Jurídica e tambémCursos de Capacitação, com diversos cursos disponíveis. Os cursos atualmente são a grande vitrine do Sincofarma. 
-                              \nOs certificados são chancelados por uma Universidade e receberam Melhores Boas Práticas em 2023 pela CNC. 
-                              \nSão oportunidades de capacitação para trabalhar com soluções burocráticas da vigilância e fiscalizações, toda parte técnica das empresa e um universo de possibilidade de aprendizado com teoria e prática em um local apropriado que representa as Farmácias e Drogarias. 
-                              \nO Sincofarma tem a sua sede no centro da cidade de São Paulo, próximo à praça da República, mesmo em frente ao órgão da Vigilância Sanitária Central, a Covisa.
-                              \nÉ filiado à Fecomercio SP, Federação do Comércio de Bens, Serviços e Turismo de SP. É o primeiro sindicato patronal das farmácias do Brasil, iniciando suas atividades em 1931. 
-                              \nNa Presidência está Natanael Aguiar Costa, em seu quarto mandato.''',
+                      '''A Educativa é uma plataforma de cursos online sediada em Natal-RN. Ela oferece uma variedade de cursos para aprimorar habilidades e conhecimentos em diversas áreas. Vamos explorar o que a Educativa tem a oferecer:
+
+ ✅ Advogados e Jurídico:
+      🌟 Cursos para advogados, estudantes de direito e profissionais do setor jurídico.
+      🌟 Tópicos incluem legislação, prática jurídica, ética e muito mais.
+\n✅ Tecnologia da Informação (TI):
+      🌟Cursos abrangendo várias áreas de TI, como redes, segurança cibernética, administração de sistemas e desenvolvimento de software.
+      🌟Aprenda sobre as últimas tendências e ferramentas no mundo da tecnologia.
+\n ✅ Engenharia de Software:
+      🌟 Explore os princípios da engenharia de software, metodologias ágeis, design de software e boas práticas de desenvolvimento.
+      🌟Prepare-se para criar soluções eficientes e escaláveis.
+\n ✅Linguagens de Programação:
+\n A Educativa oferece cursos em várias linguagens de programação, incluindo:
+      🌟 Dart
+      🌟 Flutter
+      🌟 Python
+      🌟 NodeJS
+      🌟 React
+      🌟 JavaScript
+      🌟 Java
+      🌟 Aprenda a programar, desenvolver aplicativos e sites.
+\n ✅ Curso de Português e Matemática:
+      🌟 Aprimore suas habilidades em língua portuguesa e matemática.
+      🌟Ideal para estudantes, profissionais e qualquer pessoa interessada em reforçar essas bases essenciais.
+\n ✅ Certificados e Reconhecimento:
+      🌟 Os certificados da Educativa são chancelados por uma universidade e reconhecidos pelo mercado.
+      🌟 Aproveite a oportunidade de aprender com teoria e prática em um ambiente que valoriza o conhecimento.
+\n Lembre-se de que a Educativa está sempre atualizando sua oferta de cursos para atender às necessidades dos alunos. Explore os cursos disponíveis e comece a aprimorar suas habilidades hoje mesmo!
+\n Para mais informações, você pode visitar o site da Educativa e explorar os cursos disponíveis.
+
+''',
+
                       style: TextStyle(
                         color: SincofarmaTheme.blackColor,
                         fontFamily: 'Inter',

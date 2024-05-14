@@ -1,11 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:sincofarma/src/model/mock/dummy_model.dart';
 import '../../../../theme/sincofarma_theme.dart';
 
 class CardCoursesWidget extends StatelessWidget {
   final String pathImage;
   final String starDate;
-  final String course;
+  final DummyModel course;
   final String description;
 
   const CardCoursesWidget({
@@ -84,7 +85,7 @@ class CardCoursesWidget extends StatelessWidget {
                 children: [
                   AutoSizeText(
                     maxLines: 1,
-                    course,
+                    course.course,
                     style: const TextStyle(
                         fontSize: 24,
                         fontFamily: 'Roboto',

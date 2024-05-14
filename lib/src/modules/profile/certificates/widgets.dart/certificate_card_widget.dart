@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'dart:ui' as ui;
 
 class CertificateCardWidget extends StatelessWidget {
   const CertificateCardWidget({
@@ -21,11 +21,14 @@ class CertificateCardWidget extends StatelessWidget {
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
-            Image.asset(
-              image,
-              width: sizeOf.width,
-              height: 168,
-              fit: BoxFit.cover,
+            ImageFiltered(
+              imageFilter: ui.ImageFilter.blur(sigmaX:5, sigmaY:5),
+              child: Image.asset(
+                image,
+                width: sizeOf.width,
+                height: 168,
+                fit: BoxFit.fill,
+              ),
             ),
             Container(
               color: Colors.black.withOpacity(0.4),

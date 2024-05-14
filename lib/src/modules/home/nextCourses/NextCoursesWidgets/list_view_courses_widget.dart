@@ -33,7 +33,7 @@ class _ListViewCoursesWidgetState extends State<ListViewCoursesWidget> {
                   title: CardCoursesWidget(
                     pathImage: course.imagePath,
                     starDate: course.startDate,
-                    course: course.course,
+                    course: course,
                     description: course.description,
                   ),
                   // onTap: () {

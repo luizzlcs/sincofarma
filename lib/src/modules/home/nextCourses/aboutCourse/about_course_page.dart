@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_app_bar_widget.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
+import '../../../../model/mock/dummy_model.dart';
 import 'widgets/expandableInfo/listview_expandable_widget.dart';
 import 'widgets/infor_course_widget.dart';
 import 'widgets/select_class_widget.dart';
@@ -11,7 +12,7 @@ class AboutCoursePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final argument = ModalRoute.of(context)!.settings.arguments;
-    String courseString = argument is String ? argument : argument.toString();
+    DummyModel courseString = argument as DummyModel;
 
     final sizeOf = MediaQuery.sizeOf(context);
 

@@ -1,10 +1,14 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:sincofarma/src/modules/profile/editProfile/edit_profile_controller.dart';
 import 'package:sincofarma/src/widgets/appBar/custom_app_bar_widget.dart';
 
 import '../widgets/imageProvider/image_provider_widget.dart';
 import 'widgets/custom_app_bar_edit_profile_widget.dart';
+import 'widgets/edit_image.dart';
 import 'widgets/editing_form_widget.dart';
 
 class EditProfilePage extends StatelessWidget {
@@ -15,6 +19,7 @@ class EditProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sizeOf = MediaQuery.sizeOf(context);
+    final controller = Injector.get<EditProfileController>();
     log('Altuara da tela: ${sizeOf.height}');
     return Scaffold(
       body: SizedBox(
@@ -43,10 +48,16 @@ class EditProfilePage extends StatelessWidget {
                       height: 24,
                     ),
                     // const SearchButtonWidget(),
-                    const Stack(
+                    
+                    Stack(
                       children: [
-                        ImageProviderWidget(),
-                        EditImage(),
+                        const ImageProviderWidget(),
+                        EditImage(
+                          imagePicker: () {
+                            controller.pick(ImageSource.camera);
+                            log('Procurando imagem na galeria');
+                          },
+                        ),
                       ],
                     ),
                     const Padding(
@@ -56,7 +67,7 @@ class EditProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-               Padding(
+              Padding(
                   padding: const EdgeInsets.only(
                     left: 36,
                     right: 36,

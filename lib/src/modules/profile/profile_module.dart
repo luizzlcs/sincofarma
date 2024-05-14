@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import 'package:sincofarma/src/modules/profile/editProfile/edit_profile_page.dart';
 import 'package:sincofarma/src/modules/profile/favorite/favorite_page.dart';
 import 'package:sincofarma/src/modules/profile/myCourses/my_courses_page.dart';
 import 'package:sincofarma/src/modules/profile/myProfile/my_profile_page.dart';
 
-import '../../model/mock/dummy_data.dart';
 import 'becomeAssociate/become_associate_page.dart';
 import 'certificates/certificates_router.dart';
+import 'editProfile/edit_profile_page.dart';
 import 'profile_router.dart';
 
 class ProfileModule extends FlutterGetItModule {

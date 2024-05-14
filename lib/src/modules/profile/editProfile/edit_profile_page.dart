@@ -34,7 +34,7 @@ class EditProfilePage extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(
-                      width: sizeOf.width * 0.93,
+                      width: sizeOf.width,
                       child: const CustomAppBarWidget(
                         isVisibleNotification: false,
                         isVisibleProfile: false,

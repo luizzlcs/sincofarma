@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sincofarma/src/constants/images_constants.dart';
-
+import 'package:sincofarma/src/modules/home/nextCourses/widgets/custom_app_bar_widget.dart';
+Widget preview(){
+  return const CustomAppBarWidget();
+}
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 

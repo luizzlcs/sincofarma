@@ -43,7 +43,7 @@ class InforCourseWidget extends StatelessWidget {
                   text: course.description,
                 ),
                 const TextSpan(
-                  text: 'de Vacinação para Farmacêuticos',
+                  text: '',
                 ),
               ],
             ),

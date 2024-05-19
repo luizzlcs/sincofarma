@@ -24,7 +24,10 @@ class TextFormFieldFormated extends StatelessWidget {
           inputFormatters: [CpfInputFormatter()],
           decoration: const InputDecoration(
             label: Text(
-              'CPF)',
+              'CPF',
+              style: TextStyle(
+                color: Colors.red,
+              ),
             ),
           ),
         ),

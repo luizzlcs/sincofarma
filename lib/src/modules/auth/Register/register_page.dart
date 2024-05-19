@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/modules/auth/Register/register_controller.dart';
 import 'package:validatorless/validatorless.dart';
 import 'package:brasil_fields/brasil_fields.dart';
@@ -91,7 +91,7 @@ class _RegisterState extends State<RegisterPage> {
                         ],
                         decoration: InputDecoration(
                           prefixIcon: Image.asset(
-                            ImagesConstants.cnpj,
+                            AppImages.cnpj,
                             width: 28.61,
                             height: 28.61,
                           ),
@@ -120,7 +120,7 @@ class _RegisterState extends State<RegisterPage> {
                         ],
                         decoration: InputDecoration(
                           prefixIcon: Image.asset(
-                            ImagesConstants.cpf,
+                            AppImages.cpf,
                             width: 28.61,
                             height: 28.61,
                           ),
@@ -142,7 +142,7 @@ class _RegisterState extends State<RegisterPage> {
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           prefixIcon: Image.asset(
-                            ImagesConstants.peopleName,
+                            AppImages.peopleName,
                             width: 28.61,
                             height: 28.61,
                           ),
@@ -166,7 +166,7 @@ class _RegisterState extends State<RegisterPage> {
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           prefixIcon: Image.asset(
-                            ImagesConstants.email,
+                            AppImages.email,
                             width: 28.61,
                             height: 28.61,
                           ),
@@ -203,7 +203,7 @@ class _RegisterState extends State<RegisterPage> {
                                   : const Icon(Icons.visibility_off),
                             ),
                             prefixIcon: Image.asset(
-                              ImagesConstants.block,
+                              AppImages.block,
                               width: 28.61,
                               height: 28.61,
                             ),
@@ -247,7 +247,7 @@ class _RegisterState extends State<RegisterPage> {
                                     : const Icon(Icons.visibility_off),
                               ),
                               prefixIcon: Image.asset(
-                                ImagesConstants.block,
+                                AppImages.block,
                                 width: 28.61,
                                 height: 28.61,
                               ),

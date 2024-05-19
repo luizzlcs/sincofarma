@@ -1,4 +1,4 @@
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/model/mock/dummy_model.dart';
 
 class DummyData {
@@ -7,7 +7,7 @@ class DummyData {
       course: 'Dart\\Flutter',
       description:
           'O curso de Dart e Flutter oferecido pela Educativa é um programa abrangente projetado para ensinar desde os fundamentos da programação em Dart até o desenvolvimento avançado de aplicativos com Flutter.',
-      imagePath: ImagesConstants.dartFlutter,
+      imagePath: AppImages.dartFlutter,
       startDate: '01 e 02 de Março',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',
@@ -22,7 +22,7 @@ class DummyData {
       course: 'Python',
       description:
           'O curso de Python oferecido pela Educativa é um programa completo que leva os alunos do nível básico ao avançado, capacitando-os a se destacar no mercado de trabalho.',
-      imagePath: ImagesConstants.python,
+      imagePath: AppImages.python,
       startDate: '11 de Março ',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',
@@ -37,7 +37,7 @@ class DummyData {
       course: 'Java Script',
       description:
           'Este curso abrange tudo sobre JavaScript, desde o básico até o avançado. Aprenda JavaScript através de projetos práticos, começando do zero. Tópicos incluem tipos de dados, operadores, estruturas de programação, funções, manipulação do DOM e muito mais.',
-      imagePath: ImagesConstants.javaScript,
+      imagePath: AppImages.javaScript,
       startDate: '09 de Março',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',
@@ -52,7 +52,7 @@ class DummyData {
       course: 'NodeJS',
       description:
           'O curso de NodeJS é uma formação completa que capacita os alunos a criar sistemas web robustos e eficientes. Aprenda as bases do NodeJS, incluindo suas APIs nativas e a criação de módulos. Domine o uso do JavaScript no back-end com bibliotecas como Express.js. Integre suas aplicações com bancos de dados como MongoDB e MySQL. ',
-      imagePath: ImagesConstants.nodeJs,
+      imagePath: AppImages.nodeJs,
       startDate: '02 de Abril ',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',
@@ -67,7 +67,7 @@ class DummyData {
       course: 'HTML e CSS',
       description:
           'O curso de HTML e CSS é essencial para quem deseja ingressar no mundo do desenvolvimento web. CSS é usado para definir a apresentação visual das páginas web. Isso inclui cores, fontes, layout e muito mais. Com CSS, você pode transformar o HTML bruto em páginas visualmente atraentes.',
-      imagePath: ImagesConstants.htmlCss,
+      imagePath: AppImages.htmlCss,
       startDate: '03 de Junho ',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',
@@ -82,7 +82,7 @@ class DummyData {
       course: 'Mongo DB',
       description:
           'O curso de MongoDB é uma formação completa que ensina a trabalhar com um dos bancos de dados não-relacionais mais populares e poderosos da atualidade. Aprenda a dominar o MongoDB e suas funcionalidades, incluindo cursores, documentos e conexões. Entenda como modelar dados com o MongoDB de maneira otimizada, conhecendo suas variações e como os dados são armazenados no disco.',
-      imagePath: ImagesConstants.mongoDb,
+      imagePath: AppImages.mongoDb,
       startDate: '02 de Abril ',
       info:
           'Lorem ipsum dolor sit amet. Est tempora animi aut incidunt dignissimos quo quia odit et iste excepturi qui repudiandae tempore. Ut fugiat dolorem qui dicta unde eos excepturi omnis est voluptatibus aperiam qui exercitationem sunt sit ipsum repellat qui quae blanditiis.',

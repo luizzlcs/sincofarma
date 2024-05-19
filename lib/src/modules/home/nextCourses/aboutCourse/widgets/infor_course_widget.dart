@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/model/mock/dummy_model.dart';
 import 'package:sincofarma/src/theme/sincofarma_theme.dart';
 class InforCourseWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class InforCourseWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset(
-          ImagesConstants.aboutCourse,
+          AppImages.aboutCourse,
           fit: BoxFit.cover,
           width: double.infinity,
         ),

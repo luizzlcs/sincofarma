@@ -2,7 +2,7 @@ import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/modules/auth/widgets/auth_app_bar.dart';
 import 'package:validatorless/validatorless.dart';
 
@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                         ]),
                         decoration: InputDecoration(
                           prefixIcon: Image.asset(
-                            ImagesConstants.peopleName,
+                            AppImages.peopleName,
                             width: 28.61,
                             height: 28.61,
                           ),
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                                 Validatorless.required('Senha obrigatória'),
                             decoration: InputDecoration(
                               prefixIcon: Image.asset(
-                                ImagesConstants.block,
+                                AppImages.block,
                                 width: 28.61,
                                 height: 28.61,
                               ),

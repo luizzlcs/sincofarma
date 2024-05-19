@@ -1,6 +1,6 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 class InConstructionWidget extends StatelessWidget {
   const InConstructionWidget({super.key});
 
@@ -18,7 +18,7 @@ class InConstructionWidget extends StatelessWidget {
           ),
         ),
         SizedBox(
-          child: Image.asset(ImagesConstants.inConstruction),
+          child: Image.asset(AppImages.inConstruction),
         ),
       ],
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 
 Widget preview() {
   return Container(
@@ -42,7 +42,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset(ImagesConstants.logoCurso)),
+      body: Center(child: Image.asset(AppImages.logoCurso)),
     );
   }
 }

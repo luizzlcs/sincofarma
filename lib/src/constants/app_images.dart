@@ -1,4 +1,4 @@
-abstract class ImagesConstants{
+abstract class AppImages{
   static const logoCurso = 'assets/images/logo_cursos.png';
   static const logoCursoWhite = 'assets/images/logo_cursos_white.png';
   static const add = 'assets/images/add.png';

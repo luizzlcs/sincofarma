@@ -4,11 +4,6 @@ import 'package:sincofarma/src/model/mock/dummy_model.dart';
 import '../../../../theme/sincofarma_theme.dart';
 
 class CardCoursesWidget extends StatelessWidget {
-  final String pathImage;
-  final String starDate;
-  final DummyModel course;
-  final String description;
-
   const CardCoursesWidget({
     super.key,
     required this.pathImage,
@@ -16,6 +11,11 @@ class CardCoursesWidget extends StatelessWidget {
     required this.course,
     required this.description,
   });
+
+  final String pathImage;
+  final String starDate;
+  final DummyModel course;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +38,15 @@ class CardCoursesWidget extends StatelessWidget {
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: Image.asset(
-                    pathImage,
-                    fit: BoxFit.cover,
-                  ),
+                  child: pathImage.contains('www.')
+                      ? Image.network(
+                          pathImage,
+                          fit: BoxFit.cover,
+                        )
+                      : Image.asset(
+                          pathImage,
+                          fit: BoxFit.cover,
+                        ),
                 ),
               ),
               Container(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../constants/images_constants.dart';
+import '../../../../constants/app_images.dart';
 import '../../../../widgets/appBar/buttons_app_bar_widget.dart';
 
 class CustomLogoIcons extends StatelessWidget {
@@ -29,7 +29,7 @@ class CustomLogoIcons extends StatelessWidget {
               Image.asset(
                 width: 140,
                 height: 50,
-                ImagesConstants.logoCursoWhite,
+                AppImages.logoCursoWhite,
                 fit: BoxFit.cover,
               ),
             ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants/images_constants.dart';
+import '../../constants/app_images.dart';
 import '../../theme/sincofarma_theme.dart';
 import 'buttons_app_bar_widget.dart';
 
@@ -62,7 +62,7 @@ class CustomAppBarWidget extends StatelessWidget {
                 child: Image.asset(
                   width: 140,
                   height: 50,
-                  ImagesConstants.logoCursoWhite,
+                  AppImages.logoCursoWhite,
                   fit: BoxFit.cover,
                 ),
               ),

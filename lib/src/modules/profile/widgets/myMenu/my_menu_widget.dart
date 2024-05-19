@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sincofarma/src/constants/images_constants.dart';
+import 'package:sincofarma/src/constants/app_images.dart';
 
 import 'menu_strip.dart';
 import 'menu_widget.dart';
@@ -16,12 +16,12 @@ class MyMenuWidget extends StatelessWidget {
             label: 'Meu menu',
           ),
           MenuWidget(
-            icon: ImagesConstants.profile,
+            icon: AppImages.profile,
             label: 'Meu Perfil',
             router: '/profile/my-profile-page',
           ),
           MenuWidget(
-            icon: ImagesConstants.student,
+            icon: AppImages.student,
             label: 'Meu Cursos',
             router: '/profile/my-course-page',
           ),
@@ -29,12 +29,12 @@ class MyMenuWidget extends StatelessWidget {
             label: 'Minhas informações',
           ),
           MenuWidget(
-            icon: ImagesConstants.heart,
+            icon: AppImages.heart,
             label: 'Favoritos',
             router: '/profile/favorite-page',
           ),
           MenuWidget(
-            icon: ImagesConstants.download,
+            icon: AppImages.download,
             label: 'Certificados',
             router: '/profile/certificates-page',
           ),
@@ -42,12 +42,12 @@ class MyMenuWidget extends StatelessWidget {
             label: 'Preferências',
           ),
           MenuWidget(
-            icon: ImagesConstants.info,
+            icon: AppImages.info,
             label: 'Sobre o Sincofarma',
             router: '/sincofarma/about-sincofarma-page',
           ),
           MenuWidget(
-            icon: ImagesConstants.userProfile,
+            icon: AppImages.userProfile,
             label: 'Torne-se associado',
             router: '/profile/associate-page',
           ),

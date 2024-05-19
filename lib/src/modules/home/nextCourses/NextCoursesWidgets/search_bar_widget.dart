@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import '../../../../constants/images_constants.dart';
+import '../../../../constants/app_images.dart';
 import '../next_courses_controller.dart';
 import 'search_form_controller.dart';
 
@@ -38,7 +38,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> with SearchFormContro
               hintText: 'Procurar cursos...',
               suffixIcon: IconButton(
                 onPressed: () {},
-                icon: Image.asset(ImagesConstants.search),
+                icon: Image.asset(AppImages.search),
               ),
             ),
           ),
@@ -55,7 +55,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> with SearchFormContro
             child: IconButton(
               onPressed: () {},
               icon: Image.asset(
-                ImagesConstants.group,
+                AppImages.group,
                 width: 33,
                 height: 31,
               ),

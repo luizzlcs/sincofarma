@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../constants/images_constants.dart';
+import '../../../constants/app_images.dart';
 import '../../../widgets/appBar/custom_arc_widget.dart';
 
 class AuthAppBar extends StatelessWidget {
@@ -19,7 +19,7 @@ class AuthAppBar extends StatelessWidget {
               child: Image.asset(
                 width: 200,
                 height: 70,
-                ImagesConstants.logoCursoWhite,
+                AppImages.logoCursoWhite,
                 
                 fit: BoxFit.cover,
               ),

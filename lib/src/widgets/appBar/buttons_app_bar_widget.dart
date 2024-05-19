@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../constants/images_constants.dart';
+import '../../constants/app_images.dart';
 
 class ButtonsAppBarWidget extends StatelessWidget {
   const ButtonsAppBarWidget({
@@ -24,7 +24,7 @@ class ButtonsAppBarWidget extends StatelessWidget {
                     .pushNamed('/sincofarma/notification-page');
               },
               icon: Image.asset(
-                ImagesConstants.notification,
+                AppImages.notification,
                 
               ),
             ),
@@ -36,7 +36,7 @@ class ButtonsAppBarWidget extends StatelessWidget {
                 Navigator.of(context).pushNamed('/profile/profile-page');
               },
               icon: Image.asset(
-                ImagesConstants.peopleName,
+                AppImages.peopleName,
                 color: Colors.white,
               ),
             ),

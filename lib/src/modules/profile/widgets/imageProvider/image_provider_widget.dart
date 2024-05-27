@@ -1,9 +1,7 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/modules/profile/editProfile/edit_profile_controller.dart';
 
 class ImageProviderWidget extends StatelessWidget {

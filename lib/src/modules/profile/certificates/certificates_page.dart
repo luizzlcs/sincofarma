@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import '../../../theme/sincofarma_theme.dart';
 import '../../home/nextCourses/widgets/custom_app_bar_widget.dart';
 import 'widgets.dart/certificates_list_view_widget.dart';
@@ -40,7 +38,4 @@ class CertificatesPage extends StatelessWidget {
       ),
     );
   }
-
-@override
-List<Object?> get props => [];
 }

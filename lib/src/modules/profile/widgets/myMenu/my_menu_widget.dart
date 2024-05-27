@@ -4,6 +4,10 @@ import 'package:sincofarma/src/constants/app_images.dart';
 import 'menu_strip.dart';
 import 'menu_widget.dart';
 
+Widget preview(){
+  return MyMenuWidget();
+
+}
 class MyMenuWidget extends StatelessWidget {
   const MyMenuWidget({super.key});
 
@@ -12,8 +16,16 @@ class MyMenuWidget extends StatelessWidget {
     return const SizedBox(
       child: Column(
         children: [
+          
           MenuStrip(
             label: 'Meu menu',
+          ),
+          Divider(
+            // height: 100,
+            color: Colors.red,
+            thickness: 22,
+            endIndent: 10,
+            indent: 10,
           ),
           MenuWidget(
             icon: AppImages.profile,
@@ -22,7 +34,7 @@ class MyMenuWidget extends StatelessWidget {
           ),
           MenuWidget(
             icon: AppImages.student,
-            label: 'Meu Cursos',
+            label: 'Meus Cursos',
             router: '/profile/my-course-page',
           ),
           MenuStrip(

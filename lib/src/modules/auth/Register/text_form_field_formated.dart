@@ -2,7 +2,6 @@ import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:validatorless/validatorless.dart';
 
-import '../../../theme/sincofarma_theme.dart';
 
 Widget preview() {
   return const TextFormFieldFormated();

@@ -38,15 +38,9 @@ class CardCoursesWidget extends StatelessWidget {
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
-                  child: pathImage.contains('www.')
-                      ? Image.network(
-                          pathImage,
-                          fit: BoxFit.cover,
-                        )
-                      : Image.asset(
-                          pathImage,
-                          fit: BoxFit.cover,
-                        ),
+                  child: pathImage.contains('other')
+                      ? Image.network(pathImage, fit: BoxFit.cover)
+                      : Image.asset(pathImage, fit: BoxFit.cover),
                 ),
               ),
               Container(

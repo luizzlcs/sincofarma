@@ -43,7 +43,9 @@ class _ButtonCardWidgetState extends State<ButtonCardWidget> {
 
           controller.classList[widget.index].isSelected =
               !controller.classList[widget.index].isSelected;
-
+          setState(() {
+            
+          });
           setState(() {
             backgroundColor = scheduled == true
                 ? SincofarmaTheme.greenColor

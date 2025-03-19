@@ -28,7 +28,7 @@ class AboutSincofarmaPage extends StatelessWidget {
                 child: SizedBox(
                   height: sizeOf.height * .75,
                   child: const SingleChildScrollView(
-                    child: Text(
+                    child: SelectableText(
                       textAlign: TextAlign.left,
                       '''A Educativa é uma plataforma de cursos online sediada em Natal-RN. Ela oferece uma variedade de cursos para aprimorar habilidades e conhecimentos em diversas áreas. Vamos explorar o que a Educativa tem a oferecer:
 

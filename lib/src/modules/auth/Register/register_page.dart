@@ -5,6 +5,7 @@ import 'package:flutter_getit/flutter_getit.dart';
 import 'package:signals_flutter/signals_flutter.dart';
 import 'package:sincofarma/src/constants/app_images.dart';
 import 'package:sincofarma/src/modules/auth/Register/register_controller.dart';
+import 'package:sincofarma/src/modules/auth/Register/utility_fields_methods_mixin.dart';
 import 'package:validatorless/validatorless.dart';
 import 'package:brasil_fields/brasil_fields.dart';
 import '../../../theme/sincofarma_theme.dart';
@@ -17,31 +18,9 @@ class RegisterPage extends StatefulWidget {
   State<RegisterPage> createState() => _RegisterState();
 }
 
-class _RegisterState extends State<RegisterPage> {
+class _RegisterState extends State<RegisterPage> with UtilityFieldsMethods {
   final registerController = Injector.get<RegisterController>();
-  final formKey = GlobalKey<FormState>();
-  final cnpjEC = TextEditingController();
-  final cpfEC = TextEditingController();
-  final nameEC = TextEditingController();
-  final emailEC = TextEditingController();
-  final passwordEC = TextEditingController();
-  final confirmPasswordEC = TextEditingController();
 
-  final FocusNode confirmpasswordFocus = FocusNode();
-  final FocusNode registerFocus = FocusNode();
-
-  @override
-  void dispose() {
-    cnpjEC.dispose();
-    cpfEC.dispose();
-    nameEC.dispose();
-    emailEC.dispose();
-    passwordEC.dispose();
-    confirmPasswordEC.dispose();
-    confirmpasswordFocus.dispose();
-    registerFocus.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {

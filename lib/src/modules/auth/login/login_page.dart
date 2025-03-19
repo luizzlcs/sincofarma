@@ -19,8 +19,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> with MessageViewMixin {
   final formKey = GlobalKey<FormState>();
-  final emailEC = TextEditingController();
-  final passwordEC = TextEditingController();
+  final emailEC = TextEditingController(text: ('teste@educativa.com'));
+  final passwordEC = TextEditingController(text: '123123');
   final controller = Injector.get<LoginController>();
 
   final FocusNode buttonEnterFocus = FocusNode();
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
             Center(
               child: Container(
                 padding: const EdgeInsets.all(7.92),
-                constraints: BoxConstraints(maxWidth: sizeOf.width * 0.95),
+                constraints: BoxConstraints(maxWidth: 400),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16)),
@@ -73,12 +73,12 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                   child: Column(
                     children: [
                       BorderedText(
-                        strokeWidth: 2,
+                        strokeWidth: 3,
                         strokeColor: SincofarmaTheme.blackColor,
                         child: const Text(
                           'Entre para continuar',
                           style: TextStyle(
-                            color: SincofarmaTheme.blueColor,
+                            color: SincofarmaTheme.whiteColor,
                             fontFamily: 'Inter',
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
